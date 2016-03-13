@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Rock Scissors Paper Logger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 1. angular2 앱 실행에 필요한 라이브러리를 선언-->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-sham.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.24/system-polyfills.js"></script>
+    <!--<script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>-->
+
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.24/system.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/Rx.min.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.min.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/boot')
+                .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<!-- 3. Display the application -->
+<body>
+<!-- RCPAppCmp에서 선언한 selector를 여기서 사용 -->
+<rcp-logger-main>Loading...</rcp-logger-main>
+</body>
+</html>
